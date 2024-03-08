@@ -18,16 +18,17 @@ html {
 
 body {
     /* font-family: "Nome del Font", sans-serif;  */
-    background-color: var(--color-bg) !important;
 }
 
 a {
     color: var(--color-);
     text-decoration: none;
 }
+
 h1 {
     font-size: 60px !important;
 }
+
 /* font awsome{
     content: "\";
     font-family: 'Font Awesome\ 6 Free';
@@ -49,6 +50,10 @@ h1 {
     padding: 6px 12px;
 }
 
+.bg {
+    background-color: var(--color-bg);
+}
+
 .box-fizz {
     background-color: var(--color-bg-box-fizz);
 }
@@ -57,12 +62,15 @@ h1 {
     background-color: var(--color-bg-box-buzz);
 
 }
+
 .box-fizzbuzz {
     background-color: var(--color-bg-box-fizzbuzz);
 }
+
 .box-standard {
     background-color: var(--color-bg-box);
 }
+
 .box {
     width: calc(100% / 7 - 25px);
     aspect-ratio: 1 / 1;
@@ -70,13 +78,19 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+}
+.box:hover {
+    transform: scale(1.2);
+    box-shadow: 0 3px 10px black;
 }
 .ms_gap {
     gap: 25px;
     row-gap: 25px;
 }
+
 #boxes {
-    width: 1000px;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -84,5 +98,17 @@ h1 {
 /* media query  */
 /* @media screen and (max-width: 1200px) {}   */
 /* @media screen and (max-width: 992px) {}  */
-/* @media screen and (max-width: 768px) {}  */
-/* @media screen and (max-width: 576px) {}  */
+@media screen and (max-width: 768px) {
+    .box {
+        width: calc(100% / 4 - 25px);
+    }
+    h1 {
+        font-size: 30px !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .box {
+        width: calc(100% / 2 - 25px);
+    }
+} 
