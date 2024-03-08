@@ -1,22 +1,33 @@
 /* *****RESET***** */
 :root {
-    /* --color-:;  */
+    --color-bg: #083b4c;
+    --color-bg-box: #1389b2;
+    --color-bg-box-fizz: #0cd6a1;
+    --color-bg-box-buzz: #ffd166;
+    --color-bg-box-fizzbuzz: #f0466f;
 }
+
 .ms_debug {
     border: 1px solid red;
 }
+
 /* *****GENERAL***** */
 html {
     scroll-behavior: smooth;
 }
+
 body {
     /* font-family: "Nome del Font", sans-serif;  */
+    background-color: var(--color-bg) !important;
 }
+
 a {
     color: var(--color-);
     text-decoration: none;
 }
-
+h1 {
+    font-size: 60px !important;
+}
 /* font awsome{
     content: "\";
     font-family: 'Font Awesome\ 6 Free';
@@ -37,27 +48,38 @@ a {
     display: inline-block;
     padding: 6px 12px;
 }
-.odd{
-	color:red;
-}
-.even{
-	color:green;
+
+.box-fizz {
+    background-color: var(--color-bg-box-fizz);
 }
 
-.box{
-	width: 90px;
-	height:90px;
-	background-color: blue;
-	color: white;
-	display:flex;
-	justify-content: center;
-	align-items: center;
-	margin:5px;
+.box-buzz {
+    background-color: var(--color-bg-box-buzz);
+
 }
-#boxes{
-	width: 1000px;
-	margin: 0 auto;
+.box-fizzbuzz {
+    background-color: var(--color-bg-box-fizzbuzz);
 }
+.box-standard {
+    background-color: var(--color-bg-box);
+}
+.box {
+    width: calc(100% / 7 - 25px);
+    aspect-ratio: 1 / 1;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ms_gap {
+    gap: 25px;
+    row-gap: 25px;
+}
+#boxes {
+    width: 1000px;
+    margin: 0 auto;
+}
+
 /* flex utility  */
 /* media query  */
 /* @media screen and (max-width: 1200px) {}   */
